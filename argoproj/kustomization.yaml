@@ -15,7 +15,7 @@ resources:
 #- base/istio-controlplane.yaml
 #- base/istio-addons.yaml
 ##- base/argocd-image-updater.yaml
-#- base/governor.yaml
+- base/governor.yaml
 - base/sealed-secrets.yaml
 #- base/backstage.yaml
 
