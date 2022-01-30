@@ -1,0 +1,28 @@
+apiVersion: v1
+data:
+  application.resourceTrackingMethod: annotation
+  # admin.enabled: 'false'
+  statusbadge.enabled: 'true'
+  users.anonymous.enabled: 'true'
+  url: https://cd.gitops-do.pacoguzman.xyz
+  configManagementPlugins: |
+    - name: flux
+      generate:
+        command: [sh, -c]
+        args: ["argocd-flux-plugin . --path $GIT_PATH"]
+  dex.config: |
+    connectors:
+    - type: github
+      id: github
+      name: GitHub
+      config:
+        clientID: 076a55eaf896034999e4
+        clientSecret: XXXXXXX
+        orgs:
+        - name: pacoguzman-gitops
+          teams:
+          - admins
+        teamNameField: slug
+kind: ConfigMap
+metadata:
+  name: argocd-cm
