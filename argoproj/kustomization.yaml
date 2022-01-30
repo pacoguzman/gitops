@@ -18,3 +18,5 @@ resources:
 #- base/governor.yaml
 - base/sealed-secrets.yaml
 #- base/backstage.yaml
+
+namespace: argocd
