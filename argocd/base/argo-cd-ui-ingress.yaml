@@ -13,7 +13,7 @@ spec:
   tls:
   - hosts:
     - cd.gitops-do.pacoguzman.xyz
-    secretName: argocd-secret
+    secretName: argocd-cert-secret
   rules:
   - host: cd.gitops-do.pacoguzman.xyz
     http:
