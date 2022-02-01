@@ -6,9 +6,8 @@ metadata:
     ingress.kubernetes.io/proxy-body-size: 100M
     kubernetes.io/ingress.class: "nginx"
     ingress.kubernetes.io/app-root: "/"
-    external-dns.alpha.kubernetes.io/hostname: cd.gitops-do.pacoguzman.xyz
-    external-dns.alpha.kubernetes.io/ttl: "30"
-    cert-manager.io/issuer: "argo-cd-issuer"
+    # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   tls:
   - hosts:
