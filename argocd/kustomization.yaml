@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
   - base/argo-cd-namespace.yaml
-  - base/argo-cd-issuer.yaml
   - base/argo-cd-certificate.yaml
   - base/argo-cd-ui-ingress.yaml
   - base/rollouts-extension.yaml
