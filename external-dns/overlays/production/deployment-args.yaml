@@ -1,0 +1,15 @@
+- {
+    op: add,
+    path: /spec/template/spec/containers/0/args/-,
+    value: --domain-filter=gitops-do.pacoguzman.xyz # (optional) limit to only example.com domains; change to match the zone created above.,
+  }
+- {
+    op: add,
+    path: /spec/template/spec/containers/0/args/-,
+    value: --provider=digitalocean
+  }
+- {
+    op: add,
+    path: /spec/template/spec/containers/0/args/-,
+    value: --log-level=debug
+  }
