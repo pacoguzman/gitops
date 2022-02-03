@@ -1,4 +1,7 @@
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
 data:
   application.resourceTrackingMethod: annotation
   # admin.enabled: 'false'
@@ -16,13 +19,10 @@ data:
       id: github
       name: GitHub
       config:
-        clientID: 076a55eaf896034999e4
-        clientSecret: XXXXXXX
+        clientID: $dex-secret:dex.github.config.clientID
+        clientSecret: $dex-secret:dex.github.config.clientSecret
         orgs:
         - name: pacoguzman-gitops
           teams:
           - admins
         teamNameField: slug
-kind: ConfigMap
-metadata:
-  name: argocd-cm
