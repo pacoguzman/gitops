@@ -25,13 +25,9 @@ variable region {
   default     = "ams3"
 }
 
-variable top_level_domains {
-  description = "Top level domains to create records and pods for"
-  type    = list(string)
-}
-
-variable letsencrypt_email {
-  type = string
+variable top_level_domain {
+  description = "Top level domain to create records"
+  type    = string
 }
 
 variable min_nodes {
@@ -43,7 +39,7 @@ variable min_nodes {
 variable max_nodes {
   description = "The maximum number of nodes in the default pool"
   type        = number
-  default     = 6
+  default     = 5
 }
 
 # https://slugs.do-api.dev/

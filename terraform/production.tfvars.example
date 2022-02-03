@@ -3,7 +3,5 @@ digitalocean_token = "d24dc2a28e73e07e0190ed8c93e31aecace7765545e9ed43db8c5ca16d
 cluster_name = "gitops-do-master"
 cluster_version = "1.21.5-do.0"
 region = "ams3"
-letsencrypt_email = "pacoguzmanp@gmail.com"
-top_level_domains = [
-  "backstage.gitops-do.pacoguzman.xyz"
-]
+
+top_level_domain = "gitops.example.com"

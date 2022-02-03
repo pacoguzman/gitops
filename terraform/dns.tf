@@ -1,28 +1,14 @@
-resource "digitalocean_domain" "top_level_domains" {
-    for_each = toset(var.top_level_domains)
-    name = each.value
+resource "digitalocean_domain" "gitops" {
+  name = var.top_level_domain
 }
 
-resource "digitalocean_record" "a_records" {
-  for_each = toset(var.top_level_domains)
-  domain = each.value
-  type   = "A"
-  ttl = 60
+resource "digitalocean_record" "caa" {
+  domain = digitalocean_domain.gitops.name
   name   = "@"
-  value  = digitalocean_loadbalancer.ingress_load_balancer.ip
-  depends_on = [
-    digitalocean_domain.top_level_domains
-  ]
-}
+  value  = "letsencrypt.org."
+  type   = "CAA"
 
-resource "digitalocean_record" "cname_redirects" {
-  for_each = toset(var.top_level_domains)
-  domain = each.value
-  type   = "CNAME"
-  ttl = 60
-  name   = "www"
-  value  = "@"
-  depends_on = [
-    digitalocean_domain.top_level_domains,
-  ]
+  ttl = 3600
+  flags = 0
+  tag = "issue"
 }
