@@ -7,7 +7,7 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: pacoguzmanp@gmail.com
     privateKeySecretRef:
-      name: letsencrypt
+      name: letsencrypt-dex
     solvers:
     # An empty 'selector' means that this solver matches all domains
     - selector: {}
