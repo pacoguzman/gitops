@@ -31,7 +31,6 @@ data:
   service.slack: |
     token: $slack-token
     signingSecret: $slack-signing-secret
-
   service.grafana: |
     apiUrl: https://grafana.gitops-do.pacoguzman.xyz/api
     apiKey: $grafana-token
