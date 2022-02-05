@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grafana-ingress
+  annotations:
+    ingress.kubernetes.io/proxy-body-size: 100M
+    kubernetes.io/ingress.class: "nginx"
+    ingress.kubernetes.io/app-root: "/"
+    external-dns.alpha.kubernetes.io/hostname: grafana.gitops-do.pacoguzman.xyz
+    external-dns.alpha.kubernetes.io/ttl: "30"
+    cert-manager.io/issuer: "grafana-issuer"
+spec:
+  tls:
+  - hosts:
+    - grafana.gitops-do.pacoguzman.xyz
+    secretName: grafana-tls
+  rules:
+  - host: grafana.gitops-do.pacoguzman.xyz
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: prometheus-operator-grafana
+            port:
+              number: 80
