@@ -11,6 +11,5 @@ resources:
   - dex-rb.yaml
   - dex-deploy.yaml
   - dex-svc.yaml
-  - dex-certificate.yaml
   - dex-ingress.yaml
   - dex-issuer.yaml
