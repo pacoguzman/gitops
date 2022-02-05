@@ -14,6 +14,7 @@ components:
 
 patchesStrategicMerge:
 - overlays/production/argo-cd-cm.yaml
+- overlays/production/argocd-rbac-cm.yaml
 - overlays/production/argocd-server-service.yaml
 - overlays/production/argocd-repo-server-deploy.yaml
 - overlays/production/argocd-notifications-controller-deploy.yaml
