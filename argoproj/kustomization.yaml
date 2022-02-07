@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 ##- base/argo-workflows.yaml
 ##- base/argo-events.yaml
-- base/dex.yaml
+##- base/dex.yaml
 - base/argo-cd.yaml
 - base/argo-rollouts.yaml
 - base/cert-manager.yaml
