@@ -14,6 +14,8 @@ data:
     provisioning = /etc/grafana/provisioning
     [auth.anonymous]
     enabled = true
+    [security]
+    disable_initial_admin_creation = true
 kind: ConfigMap
 metadata:
   name: prometheus-operator-grafana
