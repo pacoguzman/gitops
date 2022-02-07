@@ -4,7 +4,7 @@ metadata:
   name: argocd-cm
 data:
   application.resourceTrackingMethod: annotation
-  admin.enabled: 'false'
+  admin.enabled: 'true'
   statusbadge.enabled: 'true'
   users.anonymous.enabled: 'true'
   url: https://cd.gitops-do.pacoguzman.xyz
