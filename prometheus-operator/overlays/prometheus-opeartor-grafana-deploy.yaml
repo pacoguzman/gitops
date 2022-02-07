@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-operator-grafana
+spec:
+  template:
+    spec:
+      containers:
+      - name: grafana
+        env:
+        - name: GF_SECURITY_ADMIN_USER
+          $patch: delete
+        - name: GF_SECURITY_ADMIN_PASSWORD
+          $patch: delete

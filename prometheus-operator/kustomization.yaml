@@ -27,3 +27,12 @@ patchesJson6902:
 
 patchesStrategicMerge:
 - overlays/prometheus-operator-grafana-cm.yaml
+
+patches:
+- target:
+    name: prometheus-operator-grafana
+    namespace: prometheus-operator
+    group:
+    version: v1
+    kind: Deployment
+  path: overlays/prometheus-operator-grafana-deploy.yaml
