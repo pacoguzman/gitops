@@ -10,3 +10,8 @@ spec:
   source:
     path: cert-manager
     repoURL: https://github.com/pacoguzman/gitops
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
