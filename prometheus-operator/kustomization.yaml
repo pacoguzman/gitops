@@ -36,3 +36,5 @@ patches:
     version: v1
     kind: Deployment
   path: overlays/prometheus-operator-grafana-deploy.yaml
+
+namespace: prometheus-operator
