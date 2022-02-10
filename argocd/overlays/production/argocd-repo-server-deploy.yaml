@@ -6,20 +6,6 @@ spec:
   revisionHistoryLimit: 2
   template:
     spec:
-      containers:
-      - name: argocd-repo-server
-        volumeMounts:
-        - mountPath: /usr/local/bin/argocd-flux-plugin
-          name: custom-tools
-          subPath: argocd-flux-plugin
-        - mountPath: /usr/local/bin/vela
-          name: custom-tools
-          subPath: vela
-        #- mountPath: /home/argocd/.kube/
-        #  name: vela-kubeconfig
-      volumes:
-      - name: custom-tools
-        emptyDir: {}
       initContainers:
       - name: download-flux
         image: alexmt/argocd-flux:latest
@@ -37,3 +23,21 @@ spec:
         volumeMounts:
         - mountPath: /custom-tools
           name: custom-tools
+      containers:
+      - name: argocd-repo-server
+        env:
+        # /home/argocd/.vela is readonly file-system
+        - name: VELA_HOME
+          value: /home/argocd/cmp-server/plugins/.vela
+        volumeMounts:
+        - mountPath: /usr/local/bin/argocd-flux-plugin
+          name: custom-tools
+          subPath: argocd-flux-plugin
+        - mountPath: /usr/local/bin/vela
+          name: custom-tools
+          subPath: vela
+        #- mountPath: /home/argocd/.kube/
+        #  name: vela-kubeconfig
+      volumes:
+      - name: custom-tools
+        emptyDir: {}
