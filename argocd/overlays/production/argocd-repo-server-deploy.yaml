@@ -12,15 +12,28 @@ spec:
         - mountPath: /usr/local/bin/argocd-flux-plugin
           name: custom-tools
           subPath: argocd-flux-plugin
+        - mountPath: /usr/local/bin/vela
+          name: custom-tools
+          subPath: vela
+        #- mountPath: /home/argocd/.kube/
+        #  name: vela-kubeconfig
       volumes:
       - name: custom-tools
         emptyDir: {}
       initContainers:
-      - name: download-tools
+      - name: download-flux
         image: alexmt/argocd-flux:latest
         command: [sh, -c]
         args:
         - cp /usr/local/bin/argocd-flux-plugin /custom-tools/argocd-flux-plugin
+        volumeMounts:
+        - mountPath: /custom-tools
+          name: custom-tools
+      - name: download-kubevela
+        image: oamdev/argo-tool:v1
+        command: [sh, -c]
+        args:
+        - cp /app/vela /custom-tools/vela
         volumeMounts:
         - mountPath: /custom-tools
           name: custom-tools
