@@ -9,7 +9,7 @@ spec:
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: dexex
+    namespace: devx
   project: default
   syncPolicy:
     syncOptions:
