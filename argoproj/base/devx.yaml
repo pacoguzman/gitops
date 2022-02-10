@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devex
+spec:
+  source:
+    path: devex
+    repoURL: https://github.com/pacoguzman/gitops
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dexex
+  project: default
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true

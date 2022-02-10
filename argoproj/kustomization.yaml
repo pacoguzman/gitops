@@ -19,6 +19,6 @@ resources:
 ##- base/argocd-image-updater.yaml
 - base/governor.yaml
 - base/sealed-secrets.yaml
-#- base/backstage.yaml
+- base/devx.yaml
 
 namespace: argocd
