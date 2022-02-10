@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: devex
+  name: devx
 spec:
   source:
-    path: devex
+    path: devx
     repoURL: https://github.com/pacoguzman/gitops
     targetRevision: HEAD
   destination:
