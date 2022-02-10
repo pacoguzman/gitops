@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vela-core
+spec:
+  destination:
+    namespace: vela-system
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://charts.kubevela.net/core
+    chart: vela-core
+    targetRevision: 1.2.3
+    helm:
+      values: |
+        admissionWebhooks:
+          certManager:
+            enabled: true
+  ignoreDifferences:
+  - group: autoscaling
+    kind: HorizontalPodAutoscaler
+    jsonPointers:
+    - /spec/metrics
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true

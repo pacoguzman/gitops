@@ -10,6 +10,7 @@ resources:
 - base/cert-manager.yaml
 - base/ingress-nginx.yaml
 - base/external-dns.yaml
+- base/vela-core.yaml
 ##- base/jenkins.yaml
 - base/prometheus-operator.yaml
 - base/istio-operator.yaml
