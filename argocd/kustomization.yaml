@@ -8,6 +8,7 @@ resources:
   - base/rollouts-extension.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/ha/install.yaml
   - overlays/production/dex-sealedsecret.yaml
+  - overlays/production/vela-sealedsecret.yaml
 
 components:
 - https://github.com/argoproj-labs/argocd-extensions/manifests
