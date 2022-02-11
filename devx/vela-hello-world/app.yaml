@@ -1,0 +1,11 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  creationTimestamp: null
+  name: vela-demo
+spec:
+  components:
+  - name: vela-demo
+    properties:
+      image: argoproj/rollouts-demo:blue
+    type: webservice

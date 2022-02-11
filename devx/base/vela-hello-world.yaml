@@ -9,8 +9,8 @@ spec:
     path: devx/vela-hello-world
     repoURL: https://github.com/pacoguzman/gitops
     targetRevision: HEAD
-    plugin:
-      name: "vela"
+    #plugin:
+    #  name: "vela"
   destination:
     server: https://kubernetes.default.svc
     namespace: vela-hello-world
