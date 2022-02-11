@@ -29,6 +29,8 @@ spec:
         # /home/argocd/.vela is readonly file-system
         - name: VELA_HOME
           value: /home/argocd/cmp-server/plugins/.vela
+        - name: KUBECONFIG
+          value: /home/argocd/cmp-server/plugins/.vela-kube/config
         volumeMounts:
         - mountPath: /usr/local/bin/argocd-flux-plugin
           name: custom-tools
@@ -36,8 +38,11 @@ spec:
         - mountPath: /usr/local/bin/vela
           name: custom-tools
           subPath: vela
-        #- mountPath: /home/argocd/.kube/
-        #  name: vela-kubeconfig
+        - mountPath: /home/argocd/cmp-server/plugins/.vela-kube/
+          name: vela-kubeconfig
       volumes:
       - name: custom-tools
         emptyDir: {}
+      - name: vela-kubeconfig
+        secret:
+          secretName: vela-secret
