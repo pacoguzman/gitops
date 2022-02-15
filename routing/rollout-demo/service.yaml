@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rollout-demo
+  namespace: rollout-demo
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: rollout-demo.gitops-do.pacoguzman.xyz
+    external-dns.alpha.kubernetes.io/ttl: "30"
+spec:
+  selector:
+    app: rollout-demo
+  ports:
+  - port: 80
+    targetPort: http
+    protocol: TCP
+    name: http

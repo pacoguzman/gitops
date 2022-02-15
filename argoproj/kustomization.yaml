@@ -19,6 +19,8 @@ resources:
 ##- base/argocd-image-updater.yaml
 - base/governor.yaml
 - base/sealed-secrets.yaml
+# Teams
 - base/devx.yaml
+- base/routing.yaml
 
 namespace: argocd
