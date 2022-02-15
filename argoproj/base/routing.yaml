@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: routing
+spec:
+  source:
+    path: routing
+    repoURL: https://github.com/pacoguzman/gitops
+    targetRevision: HEAD
+  destination:
+    server: https://fce6e581-b77e-42f5-86ad-134fa335a021.k8s.ondigitalocean.com
+    namespace: routing
+  project: default
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
