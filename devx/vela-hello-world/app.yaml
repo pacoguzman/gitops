@@ -7,5 +7,5 @@ spec:
   components:
   - name: vela-demo
     properties:
-      image: argoproj/rollouts-demo:blue
+      image: argoproj/rollouts-demo:green
     type: webservice
