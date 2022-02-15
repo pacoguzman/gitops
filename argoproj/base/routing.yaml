@@ -8,7 +8,7 @@ spec:
     repoURL: https://github.com/pacoguzman/gitops
     targetRevision: HEAD
   destination:
-    server: https://fce6e581-b77e-42f5-86ad-134fa335a021.k8s.ondigitalocean.com
+    server: https://kubernetes.default.svc
     namespace: routing
   project: default
   syncPolicy:
