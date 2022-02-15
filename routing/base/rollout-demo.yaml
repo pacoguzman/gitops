@@ -4,7 +4,7 @@ metadata:
   name: rollout-demo
 spec:
   source:
-    path: routing/rollout
+    path: routing/rollout-demo
     repoURL: https://github.com/pacoguzman/gitops
     targetRevision: HEAD
   destination:
