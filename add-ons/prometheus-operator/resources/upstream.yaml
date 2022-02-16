@@ -10498,6 +10498,7 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.6.2
+    argocd.argoproj.io/sync-options: Replace=true
   creationTimestamp: null
   name: prometheuses.monitoring.coreos.com
 spec:
@@ -25794,7 +25795,7 @@ metadata:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  labels:    
+  labels:
     helm.sh/chart: kube-state-metrics-4.4.3
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: metrics
@@ -25834,7 +25835,7 @@ metadata:
     app: kube-prometheus-stack-alertmanager
     app.kubernetes.io/name: kube-prometheus-stack-alertmanager
     app.kubernetes.io/component: alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -25853,7 +25854,7 @@ metadata:
     app: kube-prometheus-stack-operator
     app.kubernetes.io/name: kube-prometheus-stack-prometheus-operator
     app.kubernetes.io/component: prometheus-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -25872,7 +25873,7 @@ metadata:
     app: kube-prometheus-stack-prometheus
     app.kubernetes.io/name: kube-prometheus-stack-prometheus
     app.kubernetes.io/component: prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -25907,7 +25908,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -26001,7 +26002,7 @@ metadata:
   labels:
     grafana_datasource: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -26032,7 +26033,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -26641,7 +26642,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -28412,7 +28413,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -30293,7 +30294,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -31482,7 +31483,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -32597,7 +32598,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -33232,7 +33233,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -34766,7 +34767,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -37853,7 +37854,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -40649,7 +40650,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -41674,7 +41675,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -44142,7 +44143,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -46165,7 +46166,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -48353,7 +48354,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -50606,7 +50607,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -52069,7 +52070,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -53804,7 +53805,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -54866,7 +54867,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -55954,7 +55955,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -56944,7 +56945,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -57530,7 +57531,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -58757,7 +58758,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -59991,7 +59992,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -61261,7 +61262,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -62372,7 +62373,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -63299,7 +63300,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -64745,7 +64746,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  labels:    
+  labels:
     helm.sh/chart: kube-state-metrics-4.4.3
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: metrics
@@ -64899,7 +64900,7 @@ metadata:
   name: prometheus-operator-kube-p-operator
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -64986,7 +64987,7 @@ metadata:
   name: prometheus-operator-kube-p-prometheus
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65037,7 +65038,7 @@ roleRef:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  labels:    
+  labels:
     helm.sh/chart: kube-state-metrics-4.4.3
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: metrics
@@ -65063,7 +65064,7 @@ metadata:
   name: prometheus-operator-kube-p-operator
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65087,7 +65088,7 @@ metadata:
   name: prometheus-operator-kube-p-prometheus
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65169,7 +65170,7 @@ kind: Service
 metadata:
   name: prometheus-operator-kube-state-metrics
   namespace: prometheus-operator
-  labels:    
+  labels:
     helm.sh/chart: kube-state-metrics-4.4.3
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: metrics
@@ -65187,8 +65188,8 @@ spec:
     protocol: TCP
     port: 8080
     targetPort: 8080
-  
-  selector:    
+
+  selector:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/instance: prometheus-operator
 ---
@@ -65200,7 +65201,7 @@ metadata:
   namespace: prometheus-operator
   annotations:
     prometheus.io/scrape: "true"
-  labels:     
+  labels:
     app: prometheus-node-exporter
     heritage: Helm
     release: prometheus-operator
@@ -65226,7 +65227,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-alertmanager
     self-monitor: "true"
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65253,7 +65254,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-coredns
     jobLabel: coredns
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65280,7 +65281,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-kube-controller-manager
     jobLabel: kube-controller-manager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65308,7 +65309,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-kube-etcd
     jobLabel: kube-etcd
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65336,7 +65337,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-kube-proxy
     jobLabel: kube-proxy
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65364,7 +65365,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-kube-scheduler
     jobLabel: kube-scheduler
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65392,7 +65393,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65419,7 +65420,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-prometheus
     self-monitor: "true"
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65444,7 +65445,7 @@ kind: DaemonSet
 metadata:
   name: prometheus-operator-prometheus-node-exporter
   namespace: prometheus-operator
-  labels:     
+  labels:
     app: prometheus-node-exporter
     heritage: Helm
     release: prometheus-operator
@@ -65461,7 +65462,7 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      labels:         
+      labels:
         app: prometheus-node-exporter
         heritage: Helm
         release: prometheus-operator
@@ -65564,7 +65565,7 @@ spec:
         checksum/sc-dashboard-provider-config: df500ae122b56f1dcd7bc5e987d475dc6e057d311e6f4c18371eaf92e264d93b
         checksum/secret: ebe6b1ff92a11c9fe57a25b0a224e3819f135b26ce4cac813968dd365293ccff
     spec:
-      
+
       serviceAccountName: prometheus-operator-grafana
       automountServiceAccountToken: true
       securityContext:
@@ -65632,7 +65633,7 @@ spec:
               mountPath: "/var/lib/grafana"
             - name: sc-dashboard-volume
               mountPath: "/tmp/dashboards"
-      
+
             - name: sc-dashboard-provider
               mountPath: "/etc/grafana/provisioning/dashboards/sc-dashboardproviders.yaml"
               subPath: provider.yaml
@@ -65697,7 +65698,7 @@ kind: Deployment
 metadata:
   name: prometheus-operator-kube-state-metrics
   namespace: prometheus-operator
-  labels:    
+  labels:
     helm.sh/chart: kube-state-metrics-4.4.3
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: metrics
@@ -65708,13 +65709,13 @@ metadata:
     release: prometheus-operator
 spec:
   selector:
-    matchLabels:      
+    matchLabels:
       app.kubernetes.io/name: kube-state-metrics
       app.kubernetes.io/instance: prometheus-operator
   replicas: 1
   template:
     metadata:
-      labels:        
+      labels:
         helm.sh/chart: kube-state-metrics-4.4.3
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/component: metrics
@@ -65762,7 +65763,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65780,7 +65781,7 @@ spec:
     metadata:
       labels:
         app: kube-prometheus-stack-operator
-        
+
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/instance: prometheus-operator
         app.kubernetes.io/version: "32.0.1"
@@ -65839,7 +65840,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65874,7 +65875,7 @@ kind: MutatingWebhookConfiguration
 metadata:
   name:  prometheus-operator-kube-p-admission
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65911,7 +65912,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -65975,7 +65976,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -66118,7 +66119,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -66150,7 +66151,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -66284,7 +66285,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -66352,7 +66353,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -66519,7 +66520,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -66649,7 +66650,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -66971,7 +66972,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -67014,7 +67015,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -67091,7 +67092,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -67443,7 +67444,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -67468,7 +67469,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -67501,7 +67502,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -67558,7 +67559,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -67627,7 +67628,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -67660,7 +67661,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -67906,7 +67907,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68029,7 +68030,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68101,7 +68102,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68173,7 +68174,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68203,7 +68204,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68233,7 +68234,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68374,7 +68375,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68404,7 +68405,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68447,7 +68448,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68530,7 +68531,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68778,7 +68779,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68808,7 +68809,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68853,7 +68854,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -68937,7 +68938,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69187,7 +69188,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
 spec:
   endpoints:
-  - interval: 
+  - interval:
     scrapeTimeout: 30s
     honorLabels: true
     port: http-web
@@ -69208,7 +69209,7 @@ kind: ServiceMonitor
 metadata:
   name: prometheus-operator-kube-state-metrics
   namespace: prometheus-operator
-  labels:    
+  labels:
     helm.sh/chart: kube-state-metrics-4.4.3
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: metrics
@@ -69220,7 +69221,7 @@ metadata:
 spec:
   jobLabel: app.kubernetes.io/name
   selector:
-    matchLabels:      
+    matchLabels:
       app.kubernetes.io/name: kube-state-metrics
       app.kubernetes.io/instance: prometheus-operator
   endpoints:
@@ -69233,7 +69234,7 @@ kind: ServiceMonitor
 metadata:
   name: prometheus-operator-prometheus-node-exporter
   namespace: prometheus-operator
-  labels:     
+  labels:
     app: prometheus-node-exporter
     heritage: Helm
     release: prometheus-operator
@@ -69257,7 +69258,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69286,7 +69287,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-coredns
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69315,7 +69316,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-apiserver
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69349,7 +69350,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-kube-controller-manager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69378,7 +69379,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-kube-etcd
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69407,7 +69408,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-kube-proxy
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69436,7 +69437,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-kube-scheduler
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69464,7 +69465,7 @@ metadata:
   name: prometheus-operator-kube-p-kubelet
   namespace: prometheus-operator
   labels:
-    app: kube-prometheus-stack-kubelet    
+    app: kube-prometheus-stack-kubelet
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69526,7 +69527,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69562,7 +69563,7 @@ metadata:
   namespace: prometheus-operator
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69589,7 +69590,7 @@ kind: ValidatingWebhookConfiguration
 metadata:
   name:  prometheus-operator-kube-p-admission
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69628,7 +69629,7 @@ metadata:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69646,7 +69647,7 @@ metadata:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69673,7 +69674,7 @@ metadata:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69700,7 +69701,7 @@ metadata:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69727,7 +69728,7 @@ metadata:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69785,7 +69786,7 @@ metadata:
     "helm.sh/hook": pre-install,pre-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission-create    
+    app: kube-prometheus-stack-admission-create
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69798,7 +69799,7 @@ spec:
     metadata:
       name:  prometheus-operator-kube-p-admission-create
       labels:
-        app: kube-prometheus-stack-admission-create        
+        app: kube-prometheus-stack-admission-create
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/instance: prometheus-operator
         app.kubernetes.io/version: "32.0.1"
@@ -69835,7 +69836,7 @@ metadata:
     "helm.sh/hook": post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission-patch    
+    app: kube-prometheus-stack-admission-patch
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: prometheus-operator
     app.kubernetes.io/version: "32.0.1"
@@ -69848,7 +69849,7 @@ spec:
     metadata:
       name:  prometheus-operator-kube-p-admission-patch
       labels:
-        app: kube-prometheus-stack-admission-patch        
+        app: kube-prometheus-stack-admission-patch
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/instance: prometheus-operator
         app.kubernetes.io/version: "32.0.1"
