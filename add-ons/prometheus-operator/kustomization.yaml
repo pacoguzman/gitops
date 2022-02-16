@@ -4,6 +4,7 @@ resources:
 - ./resources/argocd-server-metrics-servicemonitor.yaml
 - ./resources/argocd-repo-server-metrics-servicemonitor.yaml
 - ./resources/argocd-notifications-controller-metrics-servicemonitor.yaml
+- ./resources/sample-app-servicemonitor.yaml
 - ./resources/grafana-issuer.yaml
 - ./resources/grafana-ingress.yaml
 
