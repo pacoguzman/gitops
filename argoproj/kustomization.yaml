@@ -2,23 +2,15 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
+- base/add-ons.yaml
+##- base/jenkins.yaml
+##- base/dex.yaml
+# ArgoCD
 ##- base/argo-workflows.yaml
 ##- base/argo-events.yaml
-##- base/dex.yaml
 - base/argo-cd.yaml
 - base/argo-rollouts.yaml
-- base/cert-manager.yaml
-- base/ingress-nginx.yaml
-- base/external-dns.yaml
-- base/vela-core.yaml
-##- base/jenkins.yaml
-- base/prometheus-operator.yaml
-- base/istio-operator.yaml
-- base/istio-controlplane.yaml
-- base/istio-addons.yaml
 ##- base/argocd-image-updater.yaml
-- base/governor.yaml
-- base/sealed-secrets.yaml
 # Teams
 - base/devx.yaml
 - base/routing.yaml

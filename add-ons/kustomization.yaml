@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- base/cert-manager.yaml
+- base/ingress-nginx.yaml
+- base/external-dns.yaml
+- base/vela-core.yaml
+- base/prometheus-operator.yaml
+- base/istio-operator.yaml
+- base/istio-controlplane.yaml
+- base/istio-addons.yaml
+- base/governor.yaml
+- base/sealed-secrets.yaml
+
+namespace: add-ons
