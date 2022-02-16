@@ -5,11 +5,11 @@ metadata:
 spec:
   project: default
   source:
-    path: governor
+    path: add-ons/governor
     repoURL: https://github.com/pacoguzman/gitops
     targetRevision: HEAD
   destination:
-    namespace: add-ons/governor
+    namespace: governor
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
