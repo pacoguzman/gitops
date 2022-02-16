@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: autoscale-demo
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    path: devx/autoscale-demo
+    repoURL: https://github.com/pacoguzman/gitops
+    targetRevision: HEAD
+    #plugin:
+    #  name: "vela"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: autoscale-demo
+  project: default
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
