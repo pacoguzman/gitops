@@ -7,6 +7,7 @@ resources:
 - base/external-dns.yaml
 - base/vela-core.yaml
 - base/prometheus-operator.yaml
+- base/prometheus-adapter.yaml
 - base/istio-operator.yaml
 - base/istio-controlplane.yaml
 - base/istio-addons.yaml
