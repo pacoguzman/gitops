@@ -3,13 +3,13 @@ kind: Application
 metadata:
   name: cert-manager
 spec:
+  project: default
+  source:
+    path: add-ons/cert-manager
+    repoURL: https://github.com/pacoguzman/gitops
   destination:
     namespace: cert-manager
     server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: cert-manager
-    repoURL: https://github.com/pacoguzman/gitops
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

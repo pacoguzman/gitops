@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: istio-operator
 spec:
+  project: default
   source:
     repoURL: https://github.com/istio/istio
     path: manifests/charts/istio-operator
@@ -14,7 +15,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-operator
-  project: default
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

@@ -3,14 +3,14 @@ kind: Application
 metadata:
   name: istio-controlplane
 spec:
+  project: default
   source:
-    path: istio-controlplane
+    path: add-ons/istio-controlplane
     repoURL: https://github.com/pacoguzman/gitops
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-system
-  project: default
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

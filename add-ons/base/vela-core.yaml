@@ -3,9 +3,6 @@ kind: Application
 metadata:
   name: vela-core
 spec:
-  destination:
-    namespace: vela-system
-    server: https://kubernetes.default.svc
   project: default
   source:
     repoURL: https://charts.kubevela.net/core
@@ -16,6 +13,9 @@ spec:
         admissionWebhooks:
           certManager:
             enabled: true
+  destination:
+    namespace: vela-system
+    server: https://kubernetes.default.svc
   ignoreDifferences:
   - group: autoscaling
     kind: HorizontalPodAutoscaler

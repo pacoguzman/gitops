@@ -3,14 +3,14 @@ kind: Application
 metadata:
   name: external-dns
 spec:
+  project: default
   source:
-    path: external-dns
+    path: add-ons/external-dns
     repoURL: https://github.com/pacoguzman/gitops
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: default
-  project: default
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

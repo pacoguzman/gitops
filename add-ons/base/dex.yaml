@@ -3,14 +3,14 @@ kind: Application
 metadata:
   name: dex
 spec:
+  project: default
+  source:
+    path: add-ons/dex
+    repoURL: https://github.com/pacoguzman/gitops
+    targetRevision: HEAD
   destination:
     namespace: dex
     server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: dex
-    repoURL: https://github.com/pacoguzman/gitops
-    targetRevision: HEAD
   syncPolicy:
     syncOptions:
       - CreateNamespace=true

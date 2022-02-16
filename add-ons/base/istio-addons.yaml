@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: istio-addons
 spec:
+  project: default
   source:
     path: samples/addons
     repoURL: https://github.com/istio/istio
@@ -10,7 +11,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-system
-  project: default
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

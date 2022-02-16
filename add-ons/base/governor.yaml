@@ -3,14 +3,14 @@ kind: Application
 metadata:
   name: governor
 spec:
-  destination:
-    namespace: governor
-    server: https://kubernetes.default.svc
   project: default
   source:
     path: governor
     repoURL: https://github.com/pacoguzman/gitops
     targetRevision: HEAD
+  destination:
+    namespace: add-ons/governor
+    server: https://kubernetes.default.svc
   syncPolicy:
     automated:
       prune: true
