@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: devx
 spec:
+  project: default
   source:
     path: devx
     repoURL: https://github.com/pacoguzman/gitops
@@ -10,7 +11,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: devx
-  project: default
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

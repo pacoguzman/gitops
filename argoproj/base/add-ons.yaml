@@ -3,13 +3,13 @@ kind: Application
 metadata:
   name: add-ons
 spec:
-  destination:
-    namespace: add-ons
-    server: https://kubernetes.default.svc
   project: default
   source:
     path: add-ons
     repoURL: https://github.com/pacoguzman/gitops
+  destination:
+    namespace: add-ons
+    server: https://kubernetes.default.svc
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

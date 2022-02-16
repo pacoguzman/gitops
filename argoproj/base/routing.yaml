@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: routing
 spec:
+  project: default
   source:
     path: routing
     repoURL: https://github.com/pacoguzman/gitops
@@ -10,7 +11,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: routing
-  project: default
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

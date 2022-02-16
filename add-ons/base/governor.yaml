@@ -12,5 +12,7 @@ spec:
     namespace: governor
     server: https://kubernetes.default.svc
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
