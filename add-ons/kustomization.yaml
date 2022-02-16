@@ -12,5 +12,6 @@ resources:
 - base/istio-addons.yaml
 - base/governor.yaml
 - base/sealed-secrets.yaml
+- base/kyverno.yaml
 
 namespace: argocd
