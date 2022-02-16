@@ -13,4 +13,4 @@ resources:
 - base/governor.yaml
 - base/sealed-secrets.yaml
 
-namespace: add-ons
+namespace: argocd
