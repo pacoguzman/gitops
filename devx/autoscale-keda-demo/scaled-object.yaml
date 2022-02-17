@@ -16,5 +16,5 @@ spec:
     metadata:
       serverAddress: "http://prometheus-operator-kube-p-prometheus.prometheus-operator.svc.cluster.local:9090"
       metricName: http_requests_total
-      threshold: '100'
+      threshold: '50'
       query: sum(rate(http_requests_total{service="sample-app"}[2m]))
