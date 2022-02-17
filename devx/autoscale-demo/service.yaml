@@ -3,6 +3,7 @@ kind: Service
 metadata:
   labels:
     app: sample-app
+    app.kubernetes.io/name: sample-app
   name: sample-app
   annotations:
     prometheus.io/scrape: 'true'
