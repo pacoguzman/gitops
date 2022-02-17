@@ -11,7 +11,7 @@ spec:
     helm:
       values: |
         prometheus:
-          url: "prometheus-operator-kube-p-prometheus.prometheus-operator.svc.cluster.local"
+          url: "http://prometheus-operator-kube-p-prometheus.prometheus-operator.svc.cluster.local"
   destination:
     namespace: prometheus-adapter
     server: https://kubernetes.default.svc
