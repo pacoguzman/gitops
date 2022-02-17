@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: autoscale-demo
+  name: autoscale-keda-demo
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   source:
-    path: devx/autoscale-demo
+    path: devx/autoscale-keda-demo
     repoURL: https://github.com/pacoguzman/gitops
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: autoscale-demo
+    namespace: autoscale-keda-demo
   project: default
   syncPolicy:
     syncOptions:
