@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - base/autoscale-demo.yaml
+- base/autoscale-keda-demo.yaml
 #- base/backstage.yaml
 - base/vela-hello-world.yaml
 

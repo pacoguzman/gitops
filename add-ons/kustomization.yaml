@@ -12,6 +12,7 @@ resources:
 - base/istio-controlplane.yaml
 - base/istio-addons.yaml
 - base/governor.yaml
+- base/keda.yaml
 - base/sealed-secrets.yaml
 - base/kyverno.yaml
 
