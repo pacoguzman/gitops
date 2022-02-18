@@ -21,6 +21,14 @@ spec:
     kind: HorizontalPodAutoscaler
     jsonPointers:
     - /spec/metrics
+  - group: admissionregistration.k8s.io
+    kind: MutatingWebhookConfiguration
+    managedFieldsManagers:
+    - cainjector
+  - group: admissionregistration.k8s.io
+    kind: ValidatingWebhookConfiguration
+    managedFieldsManagers:
+    - cainjector
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
