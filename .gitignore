@@ -37,3 +37,7 @@ terraform/*lock.hcl
 # sealed secrets
 
 **/unsealed_secrets
+
+# k8s configs
+
+.kube
