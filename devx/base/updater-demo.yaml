@@ -8,8 +8,8 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: updater-demo=argoproj/rollouts-demo
     argocd-image-updater.argoproj.io/updater-demo.update-strategy: latest
     argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
     argocd-image-updater.argoproj.io/git-branch: main
-    # argocd-image-updater.argoproj.io/write-back-target: kustomization
 spec:
   source:
     path: devx/updater-demo/prod
