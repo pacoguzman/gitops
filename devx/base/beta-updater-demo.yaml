@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: beta-updater-demo
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    path: devx/updater-demo/beta
+    repoURL: https://github.com/pacoguzman/gitops
+    targetRevision: HEAD
+  destination:
+    # TODO: point to other cluster (use a namespace for the moment)
+    server: https://kubernetes.default.svc
+    namespace: beta-updater-demo
+  project: default
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true

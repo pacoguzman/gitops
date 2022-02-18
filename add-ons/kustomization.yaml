@@ -8,11 +8,11 @@ resources:
 - base/vela-core.yaml
 - base/prometheus-operator.yaml
 - base/prometheus-adapter.yaml
-- base/istio-operator.yaml
-- base/istio-controlplane.yaml
-- base/istio-addons.yaml
-- base/governor.yaml
 - base/keda.yaml
+#- base/istio-operator.yaml
+#- base/istio-controlplane.yaml
+#- base/istio-addons.yaml
+- base/governor.yaml
 - base/sealed-secrets.yaml
 - base/kyverno.yaml
 

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: updater-demo
+  labels:
+    app: updater-demo
+    app.kubernetes.io/name: updater-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: updater-demo
+  template:
+    metadata:
+      labels:
+        app: updater-demo
+    spec:
+      containers:
+        - name: updater-demo
+          image: argoproj/rollouts-demo:green
+          ports:
+          - name: http
+            containerPort: 8080
+            protocol: TCP
+          resources:
+            requests:
+              memory: 32Mi
+              cpu: 5m
+            limits:
+              memory: 64Mi
+              cpu: 50m
