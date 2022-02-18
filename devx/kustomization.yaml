@@ -5,6 +5,7 @@ resources:
 - base/autoscale-demo.yaml
 - base/autoscale-keda-demo.yaml
 - base/updater-demo.yaml
+- base/beta-updater-demo.yaml
 #- base/backstage.yaml
 - base/vela-hello-world.yaml
 
