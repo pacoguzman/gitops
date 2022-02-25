@@ -5,6 +5,8 @@ metadata:
   labels:
     app: sample-app
     app.kubernetes.io/name: sample-app
+  annotations:
+    foo: bar
 spec:
   replicas: 1
   selector:
