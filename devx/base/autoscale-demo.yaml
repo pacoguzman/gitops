@@ -8,7 +8,7 @@ spec:
   source:
     path: devx/autoscale-demo
     repoURL: https://github.com/pacoguzman/gitops
-    targetRevision: change-autoscale-demo
+    targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: autoscale-demo
